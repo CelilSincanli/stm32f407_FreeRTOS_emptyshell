@@ -28,6 +28,13 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  /home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/FreeRTOS/include/FreeRTOS.h \
  /home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/FreeRTOS/FreeRTOSConfig.h \
+ /home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.h \
+ /home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/SEGGER/SEGGER_SYSVIEW.h \
+ /home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/SEGGER/SEGGER.h \
+ /home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/Config/Global.h \
+ /home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/SEGGER/SEGGER_SYSVIEW_ConfDefaults.h \
+ /home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/Config/SEGGER_SYSVIEW_Conf.h \
+ /home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/Config/SEGGER_RTT_Conf.h \
  /home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/FreeRTOS/include/projdefs.h \
  /home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/FreeRTOS/include/portable.h \
  /home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/FreeRTOS/include/deprecated_definitions.h \
@@ -95,6 +102,20 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 /home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/FreeRTOS/include/FreeRTOS.h:
 
 /home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/FreeRTOS/FreeRTOSConfig.h:
+
+/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/OS/SEGGER_SYSVIEW_FreeRTOS.h:
+
+/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/SEGGER/SEGGER_SYSVIEW.h:
+
+/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/SEGGER/SEGGER.h:
+
+/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/Config/Global.h:
+
+/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/SEGGER/SEGGER_SYSVIEW_ConfDefaults.h:
+
+/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/Config/SEGGER_SYSVIEW_Conf.h:
+
+/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/SEGGER/Config/SEGGER_RTT_Conf.h:
 
 /home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/ThirdParty/FreeRTOS/include/projdefs.h:
 

@@ -9,18 +9,18 @@ CDefines=USE_HAL_DRIVER;STM32F407xx;USE_HAL_DRIVER;USE_HAL_DRIVER;
 [PreviousGenFiles]
 AdvancedFolderStructure=true
 HeaderFileListSize=3
-HeaderFiles#0=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/FreeRTOS_Project/Core/Inc/stm32f4xx_it.h
-HeaderFiles#1=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/FreeRTOS_Project/Core/Inc/stm32f4xx_hal_conf.h
-HeaderFiles#2=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/FreeRTOS_Project/Core/Inc/main.h
+HeaderFiles#0=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/Core/Inc/stm32f4xx_it.h
+HeaderFiles#1=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/Core/Inc/stm32f4xx_hal_conf.h
+HeaderFiles#2=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/Core/Inc/main.h
 HeaderFolderListSize=1
-HeaderPath#0=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/FreeRTOS_Project/Core/Inc
+HeaderPath#0=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/Core/Inc
 HeaderFiles=;
 SourceFileListSize=4
-SourceFiles#0=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/FreeRTOS_Project/Core/Src/stm32f4xx_it.c
-SourceFiles#1=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/FreeRTOS_Project/Core/Src/stm32f4xx_hal_msp.c
-SourceFiles#2=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/FreeRTOS_Project/Core/Src/stm32f4xx_hal_timebase_tim.c
-SourceFiles#3=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/FreeRTOS_Project/Core/Src/main.c
+SourceFiles#0=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/Core/Src/stm32f4xx_it.c
+SourceFiles#1=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/Core/Src/stm32f4xx_hal_msp.c
+SourceFiles#2=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/Core/Src/stm32f4xx_hal_timebase_tim.c
+SourceFiles#3=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/Core/Src/main.c
 SourceFolderListSize=1
-SourcePath#0=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/FreeRTOS_Project/Core/Src
+SourcePath#0=/home/ics/workspace/STM32/stm32workspace/RTOS_workspace/001Tasks/Core/Src
 SourceFiles=;
 

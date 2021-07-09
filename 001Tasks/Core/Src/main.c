@@ -44,7 +44,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+#define DWT_CTRL	(*(volatile uint32_t*)0xE0001000)
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -94,6 +94,20 @@ int main(void)
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
 
+  // Enable th CYCCNT(Cycle counting) counter.
+  DWT_CTRL |= (1<<0); // it sets the 0th bit to 1 on the register.
+
+  // Initialize Segger uart recorder.
+  SEGGER_UART_init(500000);// to obtain high baudrate must be sure system clock is set to max value.
+
+  //SEGGER APIs to start the recordings of FreeRTOS application.
+  SEGGER_SYSVIEW_Conf();
+
+  // If segger_uart.c has integrated to project this code must be comment line.(It is already called in segger_uart.c)
+//  SEGGER_SYSVIEW_Start(); //This function calls before scheduler that is why priority grouping initialization is required!
+  	  	  	  	  	  	  //Check out the HAL_MspInit function.
+
+  // Create Tasks
   status = xTaskCreate(task1_handler, "Task-1", 200, "Hello world form Task-1", 2, &task1_handle);
 
   configASSERT(status == pdPASS);
@@ -143,8 +157,8 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
   RCC_OscInitStruct.PLL.PLLM = 8;
-  RCC_OscInitStruct.PLL.PLLN = 50;
-  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV4;
+  RCC_OscInitStruct.PLL.PLLN = 168;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV2;
   RCC_OscInitStruct.PLL.PLLQ = 7;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -159,7 +173,7 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
   {
     Error_Handler();
   }
@@ -306,18 +320,22 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 static void task1_handler(void* parameters)
 {
+	char msg[100];
 	while(1)
 	{
-		printf("%s\n", (char*)parameters);
+		sprintf(msg,100,"%s\n",(char*)parameters);
+		SEGGER_SYSVIEW_PrintfTarget(msg);
 		taskYIELD(); // it release the processor when task-1 done for one time
 	}
 }
 
 static void task2_handler(void* parameters)
 {
+	char msg[100];
 	while(1)
 	{
-		printf("%s\n", (char*)parameters);
+		sprintf(msg,100,"%s\n",(char*)parameters);
+		SEGGER_SYSVIEW_PrintfTarget(msg);
 		taskYIELD(); // it release the processor when task-2 done for one time
 	}
 }
